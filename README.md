@@ -15,7 +15,7 @@ You can import the file into your stylesheet as follows:
 
 NOTE: The directory where the stylesheet is placed.
 
-2. <link>ing a stylesheet
+2. Link a stylesheet
 You may also link to the stylesheet in the <head> of the HTML document:
 
 ```
