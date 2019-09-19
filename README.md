@@ -1,6 +1,6 @@
 # The Balsamiq Sans Font
 
-Balsamiq Sans is the handwritten font created for the Balsamiq Wireframes and has been in use since version 2.1.
+Balsamiq Sans is the handwritten font created for [Balsamiq Wireframes](https://balsamiq.com/wireframes/) and has been in use since version 2.1.
 
 For more information, visit the  https://balsamiq.com/givingback/opensource/font/
 
