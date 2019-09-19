@@ -37,6 +37,4 @@ body {
 
 ## License
 
-This font is licensed under the SIL OFL license: http://scripts.sil.org/OFL
-
-See the LICENSE.txt file for more information.
+See https://github.com/balsamiq/balsamiqsans/blob/master/LICENSE.txt
