@@ -1,6 +1,6 @@
 {
 .appVersion = "1230";
-copyright = "Copyright (c) 2011-2013 by Balsamiq SRL. All rights reserved.";
+copyright = "Copyright 2011 The Balsamiq Sans Project Authors (https://github.com/balsamiq/balsamiqsans)";
 customParameters = (
 {
 name = license;
@@ -9,10 +9,6 @@ value = "This Font Software is licensed under the SIL Open Font License, Version
 {
 name = licenseURL;
 value = "http://scripts.sil.org/OFL";
-},
-{
-name = description;
-value = "Copyright (c) 2011-2013 by Balsamiq SRL. All rights reserved.";
 },
 {
 name = trademark;
