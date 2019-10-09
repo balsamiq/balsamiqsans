@@ -4,7 +4,7 @@ copyright = "Copyright (c) 2011-2013 by Balsamiq SRL. All rights reserved.";
 customParameters = (
 {
 name = license;
-value = "Balsamiq Sans Font\012(c) 2011-2015 Michael Angeles for Balsamiq, SRL\012\012This font is licensed under the SIL OFL license: http://scripts.sil.org/OFL\012\012Reserved Font Name: Balsamiq";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL";
 },
 {
 name = licenseURL;
