@@ -1006,6 +1006,10 @@ ascender = 800;
 capHeight = 715;
 customParameters = (
 {
+name = typoAscender;
+value = 800;
+},
+{
 name = typoDescender;
 value = -200;
 },
@@ -1014,20 +1018,16 @@ name = typoLineGap;
 value = 0;
 },
 {
-name = hheaLineGap;
-value = 90;
-},
-{
 name = hheaAscender;
-value = 800;
-},
-{
-name = typoAscender;
 value = 800;
 },
 {
 name = hheaDescender;
 value = -200;
+},
+{
+name = hheaLineGap;
+value = 0;
 },
 {
 name = winAscent;
@@ -1063,6 +1063,10 @@ ascender = 800;
 capHeight = 715;
 customParameters = (
 {
+name = typoAscender;
+value = 800;
+},
+{
 name = typoDescender;
 value = -200;
 },
@@ -1071,20 +1075,16 @@ name = typoLineGap;
 value = 0;
 },
 {
-name = hheaLineGap;
-value = 90;
-},
-{
 name = hheaAscender;
-value = 800;
-},
-{
-name = typoAscender;
 value = 800;
 },
 {
 name = hheaDescender;
 value = -200;
+},
+{
+name = hheaLineGap;
+value = 0;
 },
 {
 name = winAscent;
@@ -233608,6 +233608,7 @@ instanceInterpolations = {
 isBold = 1;
 isItalic = 1;
 name = BoldItalic;
+weightClass = Bold;
 }
 );
 kerning = {

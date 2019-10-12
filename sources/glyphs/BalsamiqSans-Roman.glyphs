@@ -1023,7 +1023,7 @@ value = -200;
 },
 {
 name = hheaLineGap;
-value = 90;
+value = 0;
 },
 {
 name = winAscent;
@@ -1080,7 +1080,7 @@ value = -200;
 },
 {
 name = hheaLineGap;
-value = 90;
+value = 0;
 },
 {
 name = winAscent;
@@ -233619,6 +233619,7 @@ instanceInterpolations = {
 };
 isBold = 1;
 name = Bold;
+weightClass = Bold;
 }
 );
 kerning = {
