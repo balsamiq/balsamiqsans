@@ -1022,11 +1022,11 @@ value = 90;
 },
 {
 name = winAscent;
-value = 993;
+value = 1200;
 },
 {
 name = winDescent;
-value = 263;
+value = 430;
 }
 );
 descender = -200;
@@ -1078,12 +1078,12 @@ name = hheaLineGap;
 value = 90;
 },
 {
-name = winDescent;
-value = 263;
+name = winAscent;
+value = 1200;
 },
 {
-name = winAscent;
-value = 993;
+name = winDescent;
+value = 430;
 }
 );
 descender = -200;
