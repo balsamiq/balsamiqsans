@@ -978,6 +978,11 @@ uni04F9,
 uni04FE,
 uni04FF
 );
+},
+{
+name = fsType;
+value = (
+);
 }
 );
 date = "2011-05-14 02:05:45 +0000";
@@ -199086,11 +199091,15 @@ unicode = 02D8;
 },
 {
 glyphname = _1;
-lastChange = "2019-10-09 22:50:20 +0000";
+lastChange = "2019-10-12 00:23:06 +0000";
 layers = (
 {
 layerId = UUID0;
 width = 500;
+},
+{
+layerId = "E9DB90EB-1A2C-4E35-923D-2CA62A497591";
+width = 600;
 }
 );
 },
@@ -199292,7 +199301,7 @@ unicode = 25C0;
 },
 {
 glyphname = omega;
-lastChange = "2019-10-09 22:50:20 +0000";
+lastChange = "2019-10-12 00:23:06 +0000";
 layers = (
 {
 layerId = UUID0;
@@ -199376,6 +199385,10 @@ nodes = (
 }
 );
 width = 740;
+},
+{
+layerId = "E9DB90EB-1A2C-4E35-923D-2CA62A497591";
+width = 600;
 }
 );
 unicode = 03C9;
