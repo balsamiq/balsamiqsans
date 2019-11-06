@@ -1,7 +1,8 @@
 {
 .appVersion = "1230";
 DisplayStrings = (
-"/dslash"
+"/dslash",
+"/dslash/hbar/Scedilla/scaron/uogonek/uni0180/uni01E2/uni01E4/aringacute/aeacute/oslashacute"
 );
 copyright = "Copyright 2011 The Balsamiq Sans Project Authors (https://github.com/balsamiq/balsamiqsans)";
 customParameters = (
@@ -37747,63 +37748,6 @@ width = 249;
 }
 );
 unicode = 0130;
-},
-{
-glyphname = dotlessi;
-lastChange = "2019-10-09 22:50:45 +0000";
-layers = (
-{
-layerId = UUID0;
-paths = (
-{
-closed = 1;
-nodes = (
-"58 342 OFFCURVE",
-"51 481 QCURVE",
-"50 502 OFFCURVE",
-"77 533 OFFCURVE",
-"119 535 OFFCURVE",
-"150 508 OFFCURVE",
-"151 487 QCURVE",
-"158 334 OFFCURVE",
-"158 47 QCURVE",
-"158 26 OFFCURVE",
-"129 -3 OFFCURVE",
-"87 -3 OFFCURVE",
-"58 26 OFFCURVE",
-"58 47 QCURVE"
-);
-}
-);
-width = 208;
-},
-{
-layerId = "E9DB90EB-1A2C-4E35-923D-2CA62A497591";
-paths = (
-{
-closed = 1;
-nodes = (
-"60 321 OFFCURVE",
-"50 440 QCURVE",
-"49 469 OFFCURVE",
-"87 512 OFFCURVE",
-"145 515 OFFCURVE",
-"188 477 OFFCURVE",
-"190 448 QCURVE",
-"199 325 OFFCURVE",
-"197 66 QCURVE",
-"196 37 OFFCURVE",
-"155 -3 OFFCURVE",
-"97 -2 OFFCURVE",
-"57 39 OFFCURVE",
-"57 68 QCURVE"
-);
-}
-);
-width = 248;
-}
-);
-unicode = 0131;
 },
 {
 glyphname = IJ;
@@ -233058,6 +233002,63 @@ width = 478;
 }
 );
 unicode = 04FF;
+},
+{
+glyphname = idotless;
+lastChange = "2019-10-15 01:27:01 +0000";
+layers = (
+{
+layerId = UUID0;
+paths = (
+{
+closed = 1;
+nodes = (
+"58 342 OFFCURVE",
+"51 481 QCURVE",
+"50 502 OFFCURVE",
+"77 533 OFFCURVE",
+"119 535 OFFCURVE",
+"150 508 OFFCURVE",
+"151 487 QCURVE",
+"158 334 OFFCURVE",
+"158 47 QCURVE",
+"158 26 OFFCURVE",
+"129 -3 OFFCURVE",
+"87 -3 OFFCURVE",
+"58 26 OFFCURVE",
+"58 47 QCURVE"
+);
+}
+);
+width = 208;
+},
+{
+layerId = "E9DB90EB-1A2C-4E35-923D-2CA62A497591";
+paths = (
+{
+closed = 1;
+nodes = (
+"60 321 OFFCURVE",
+"50 440 QCURVE",
+"49 469 OFFCURVE",
+"87 512 OFFCURVE",
+"145 515 OFFCURVE",
+"188 477 OFFCURVE",
+"190 448 QCURVE",
+"199 325 OFFCURVE",
+"197 66 QCURVE",
+"196 37 OFFCURVE",
+"155 -3 OFFCURVE",
+"97 -2 OFFCURVE",
+"57 39 OFFCURVE",
+"57 68 QCURVE"
+);
+}
+);
+width = 248;
+}
+);
+unicode = 0131;
 },
 {
 glyphname = guillemetleft;
