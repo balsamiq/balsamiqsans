@@ -1,19 +1,11 @@
-/*
-
-Balsamiq Sans Font
-Copyright (c) 2011-2013 Michael Angeles for Balsamiq, SRL
-
-This font is licensed under the SIL OFL license: http://scripts.sil.org/OFL
-
-Reserved Font Name: Balsamiq
-
-*/
-
+Copyright 2011 The Balsamiq Sans Project Authors (https://github.com/balsamiq/balsamiqsans)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL
 
+
+Reserved Font Name: Balsamiq
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
