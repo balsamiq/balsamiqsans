@@ -39,4 +39,4 @@ body {
 
 ## License
 
-See https://github.com/balsamiq/balsamiqsans/blob/master/LICENSE.txt
+See https://github.com/balsamiq/balsamiqsans/OFL.txt
