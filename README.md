@@ -11,7 +11,9 @@ To use Balsamiq Sans font as a webfont, balsamiqsans.css is included.
 1. @import
 You can import the file into your stylesheet as follows:
 
+```
 @import url("webfonts/balsamiqsans.css");
+```
 
 NOTE: The directory where the stylesheet is placed.
 
@@ -19,7 +21,7 @@ NOTE: The directory where the stylesheet is placed.
 You may also link to the stylesheet in the <head> of the HTML document:
 
 ```
-<link rel="stylesheet" type="text/css" href="webfonts/Montserrat.css">
+<link rel="stylesheet" type="text/css" href="webfonts/balsamiqsans.css">
 ```
 
 NOTE: The directory where the stylesheet is placed.
@@ -30,7 +32,7 @@ Then you may use it to style elements:
 
 ```
 body {
-  font-family: 'Balsamiq Sans', sans-serif;
+  font-family: 'BalsamiqSans', sans-serif;
   font-weight: normal;
 }
 ```
