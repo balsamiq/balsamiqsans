@@ -1,0 +1,14 @@
+sources:
+  - glyphs/BalsamiqSans-Roman.glyphs
+  - glyphs/BalsamiqSans-Italic.glyphs
+axisOrder:
+  - wght
+  - ital
+familyName: Balsamiq Sans
+
+# Sources aren't VF compatible
+buildVariable: false
+
+# Outlines are quadratic
+reverseOutlineDirection: false
+removeOutlineOverlaps: false
