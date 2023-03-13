@@ -8,6 +8,7 @@ familyName: Balsamiq Sans
 
 # Sources aren't VF compatible
 buildVariable: false
+checkCompatibility: false
 
 # Outlines are quadratic
 reverseOutlineDirection: false
