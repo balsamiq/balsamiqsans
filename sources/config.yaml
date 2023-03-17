@@ -1,6 +1,6 @@
 sources:
   - glyphs/BalsamiqSans-Roman.glyphs
-  - glyphs/BalsamiqSans-Italic.glyphs
+  #- glyphs/BalsamiqSans-Italic.glyphs
 axisOrder:
   - wght
   - ital
