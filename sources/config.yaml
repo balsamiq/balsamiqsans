@@ -19,3 +19,5 @@ removeOutlineOverlaps: false
 interpolate: true
 # buildOTF: false
 # buildWebfont: false
+
+autohintTTF: true
