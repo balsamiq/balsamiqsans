@@ -47,7 +47,6 @@ glyphtools==0.8.0
 h11==0.14.0
 hyperglot==0.4.4
 idna==3.4
-importlib-resources==5.12.0
 Jinja2==3.1.2
 lxml==4.9.2
 markdown-it-py==2.2.0
@@ -106,7 +105,6 @@ tqdm==4.65.0
 trio==0.22.0
 trio-websocket==0.10.0
 ttfautohint-py==0.5.1
-typing-extensions==4.5.0
 ufo2ft==2.30.0
 ufoLib2==0.14.0
 ufolint==1.2.0
@@ -119,5 +117,4 @@ vttLib==0.11.0
 wrapt==1.15.0
 wsproto==1.2.0
 youseedee==0.3.0
-zipp==3.15.0
 zopfli==0.2.2
