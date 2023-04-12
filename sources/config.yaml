@@ -8,7 +8,16 @@ familyName: Balsamiq Sans
 
 # Sources aren't VF compatible
 buildVariable: false
+checkCompatibility: false
 
 # Outlines are quadratic
 reverseOutlineDirection: false
 removeOutlineOverlaps: false
+
+# Hit the needed code paths to insert the right metadata into the sources before
+# they hit the compiler.
+interpolate: true
+buildOTF: false
+buildWebfont: false
+
+autohintTTF: true
