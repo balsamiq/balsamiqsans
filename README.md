@@ -18,8 +18,7 @@ You can import the file into your stylesheet as follows:
 NOTE: The directory where the stylesheet is placed.
 
 2. Link a stylesheet
-You may also link to the stylesheet in the <head> of the HTML document:
-
+You may also link to the stylesheet in the `<head>` of the HTML document:
 ```
 <link rel="stylesheet" type="text/css" href="webfonts/balsamiqsans.css">
 ```
