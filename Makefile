@@ -28,6 +28,7 @@ build.stamp: venv .init.stamp sources/config.yaml $(SOURCES)
 
 venv/touchfile: requirements.txt
 	test -d venv || python3 -m venv venv
+	. venv/bin/activate; pip install --upgrade "pip>=26.1" "setuptools>=78.1.1"
 	. venv/bin/activate; pip install -Ur requirements.txt
 	touch venv/touchfile
 
@@ -52,5 +53,5 @@ update-project-template:
 
 update: venv
 	venv/bin/pip install --upgrade pip-tools
-	venv/bin/pip-compile --upgrade --resolver=backtracking requirements.in
+	venv/bin/pip-compile --upgrade --resolver=backtracking --allow-unsafe requirements.in
 	venv/bin/pip-sync requirements.txt
