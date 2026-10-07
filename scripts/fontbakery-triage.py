@@ -34,6 +34,8 @@ WORKFLOW = "build.yaml"
 ARTIFACT = "balsamiqsans-fonts"
 REPORT_IN_ARTIFACT = "out/fontbakery/fontbakery-report.md"
 BAD_STATUSES = {"FAIL", "ERROR", "FATAL"}
+# The statuses the report lists in full; the others are only counted.
+LISTED_STATUSES = BAD_STATUSES | {"WARN"}
 
 # Verdicts for the checks we've looked at, keyed by fontbakery check ID.
 #   fix:      a real problem we can fix in this repo
@@ -134,7 +136,7 @@ TRIAGE = {
 }
 
 VERDICT_TITLES = OrderedDict([
-    ("new", "Not triaged yet: read these and add them to TRIAGE"),
+    ("new", "Needs a look: FAIL, ERROR or FATAL, or not in TRIAGE yet"),
     ("fix", "Fix: we need to and can"),
     ("optional", "Optional: could fix, low value or design work"),
     ("ignore", "Ignore: not a problem here, or not fixable in this repo"),
@@ -404,8 +406,9 @@ def main():
         bad = BAD_STATUSES & set(entry["statuses"].values())
         has_bad_status = has_bad_status or bool(bad)
         verdict = TRIAGE.get(check_id, ("new",))[0]
-        # A FAIL or worse always needs a look, even on a check we used to ignore.
-        if bad and verdict != "fix":
+        # A FAIL or worse always needs a look, whatever we decided about the
+        # warning this check used to give.
+        if bad:
             verdict = "new"
         groups[verdict].append(check_id)
 
@@ -418,7 +421,24 @@ def main():
             print_check(check_id, checks[check_id], fonts, verdict)
 
     if not checks:
-        print("No results listed in the report (only WARN and worse are included).")
+        print("No WARN, FAIL, ERROR or FATAL results in the report.")
+
+    # Check the parse against the report's own totals, so a truncated report or
+    # a change in fontbakery's format can't pass for a clean run.
+    parsed = Counter(s for e in checks.values() for s in e["statuses"].values())
+    if not summary:
+        print("ERROR: couldn't find the report's summary table, so the results "
+              "above may be incomplete.")
+        return 1
+    mismatches = [
+        f"{status}: {summary[status]} in the summary, {parsed[status]} parsed"
+        for status in sorted(LISTED_STATUSES)
+        if status in summary and summary[status] != str(parsed[status])
+    ]
+    if mismatches:
+        print("ERROR: the results above don't match the report's summary "
+              "table, so the parser missed some: " + "; ".join(mismatches))
+        return 1
 
     return 1 if has_bad_status or groups["new"] else 0
 
