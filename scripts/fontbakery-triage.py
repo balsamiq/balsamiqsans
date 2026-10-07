@@ -366,10 +366,10 @@ def download_report(run_id):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    parser.add_argument("report", nargs="?",
+    source = parser.add_mutually_exclusive_group()
+    source.add_argument("report", nargs="?",
                         help="a local fontbakery markdown report "
                              "(default: download it from GitHub Actions)")
-    source = parser.add_mutually_exclusive_group()
     source.add_argument("--branch", default="master",
                         help="use the latest build of this branch (default: master)")
     source.add_argument("--run", type=int, help="use this GitHub Actions run ID")
@@ -426,14 +426,15 @@ def main():
     # Check the parse against the report's own totals, so a truncated report or
     # a change in fontbakery's format can't pass for a clean run.
     parsed = Counter(s for e in checks.values() for s in e["statuses"].values())
-    if not summary:
-        print("ERROR: couldn't find the report's summary table, so the results "
-              "above may be incomplete.")
+    missing = sorted(LISTED_STATUSES - set(summary))
+    if missing:
+        print("ERROR: the report's summary table is missing or has no "
+              f"{', '.join(missing)} column, so the results above may be incomplete.")
         return 1
     mismatches = [
         f"{status}: {summary[status]} in the summary, {parsed[status]} parsed"
         for status in sorted(LISTED_STATUSES)
-        if status in summary and summary[status] != str(parsed[status])
+        if summary[status] != str(parsed[status])
     ]
     if mismatches:
         print("ERROR: the results above don't match the report's summary "
