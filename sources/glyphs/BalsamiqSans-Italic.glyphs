@@ -2218,8 +2218,8 @@ tag = aalt;
 code = "lookup ccmp_Other_1 {
 	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dblgravecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb];
 	@CombiningNonTopAccents = [cedillacomb ogonekcomb horncomb dotbelowcomb commaaccentcomb verticallinebelowcomb];
-	sub [i j iogonek istroke i-cy]' @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy];
-	sub [i j iogonek istroke i-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy];
+	sub [i j iogonek istroke i-cy je-cy]' @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy jdotless];
+	sub [i j iogonek istroke i-cy je-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy jdotless];
 	@Markscomb = [gravecomb acutecomb circumflexcomb tildecomb macroncomb brevecomb dotaccentcomb dieresiscomb ringcomb hungarumlautcomb caroncomb horncomb cedillacomb ogonekcomb];
 	@MarkscombCase = [gravecomb.case acutecomb.case circumflexcomb.case tildecomb.case macroncomb.case brevecomb.case dotaccentcomb.case dieresiscomb.case ringcomb.case hungarumlautcomb.case caroncomb.case horncomb.case cedillacomb.case ogonekcomb.case];
 	sub @Markscomb @Markscomb' by @MarkscombCase;
@@ -5677,6 +5677,12 @@ kernRight = I;
 lastChange = "2023-03-20 16:16:01 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (278,715);
+}
+);
 background = {
 shapes = (
 {
@@ -5757,6 +5763,12 @@ nodes = (
 width = 310;
 },
 {
+anchors = (
+{
+name = top;
+pos = (249,715);
+}
+);
 background = {
 shapes = (
 {
@@ -36358,6 +36370,12 @@ ref = circumflexcomb.case;
 width = 777;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (324,0);
+}
+);
 background = {
 shapes = (
 {
@@ -52587,6 +52605,12 @@ ref = acutecomb;
 width = 582;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (217,0);
+}
+);
 background = {
 shapes = (
 {
@@ -53328,6 +53352,12 @@ ref = caroncomb;
 width = 582;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (222,0);
+}
+);
 background = {
 shapes = (
 {
@@ -53504,6 +53534,12 @@ kernRight = e;
 lastChange = "2023-03-20 16:15:41 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (237,0);
+}
+);
 background = {
 shapes = (
 {
@@ -201701,6 +201737,12 @@ glyphname = "io-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (402,724);
+}
+);
 background = {
 shapes = (
 {
@@ -201909,6 +201951,12 @@ nodes = (
 width = 551;
 },
 {
+anchors = (
+{
+name = top;
+pos = (399,703);
+}
+);
 background = {
 shapes = (
 {
@@ -202923,6 +202971,12 @@ nodes = (
 width = 559;
 },
 {
+anchors = (
+{
+name = top;
+pos = (362,519);
+}
+);
 background = {
 shapes = (
 {
@@ -204819,6 +204873,12 @@ glyphname = "o-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (306,520);
+}
+);
 background = {
 shapes = (
 {
@@ -204954,6 +205014,12 @@ nodes = (
 width = 522;
 },
 {
+anchors = (
+{
+name = top;
+pos = (321,520);
+}
+);
 background = {
 shapes = (
 {
@@ -206280,6 +206346,12 @@ nodes = (
 width = 461;
 },
 {
+anchors = (
+{
+name = top;
+pos = (269,521);
+}
+);
 background = {
 shapes = (
 {
@@ -208995,6 +209067,12 @@ glyphname = "yeru-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (406,520);
+}
+);
 background = {
 shapes = (
 {
@@ -209147,6 +209225,12 @@ nodes = (
 width = 718;
 },
 {
+anchors = (
+{
+name = top;
+pos = (432,520);
+}
+);
 background = {
 shapes = (
 {
@@ -209313,6 +209397,12 @@ glyphname = "hardsign-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (331,520);
+}
+);
 background = {
 shapes = (
 {
@@ -209472,6 +209562,12 @@ nodes = (
 width = 563;
 },
 {
+anchors = (
+{
+name = top;
+pos = (332,520);
+}
+);
 background = {
 shapes = (
 {
@@ -210822,6 +210918,12 @@ glyphname = "e-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (329,520);
+}
+);
 background = {
 shapes = (
 {
@@ -210938,6 +211040,12 @@ nodes = (
 width = 521;
 },
 {
+anchors = (
+{
+name = top;
+pos = (325,520);
+}
+);
 background = {
 shapes = (
 {
@@ -211109,6 +211217,12 @@ glyphname = "ereversed-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (316,520);
+}
+);
 background = {
 shapes = (
 {
@@ -211269,6 +211383,12 @@ nodes = (
 width = 516;
 },
 {
+anchors = (
+{
+name = top;
+pos = (300,520);
+}
+);
 background = {
 shapes = (
 {
@@ -211589,6 +211709,12 @@ glyphname = "yi-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (194,713);
+}
+);
 background = {
 shapes = (
 {
@@ -211693,6 +211819,12 @@ nodes = (
 width = 239;
 },
 {
+anchors = (
+{
+name = top;
+pos = (204,700);
+}
+);
 background = {
 shapes = (
 {
@@ -212332,6 +212464,12 @@ glyphname = "iu-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (450,520);
+}
+);
 background = {
 shapes = (
 {
@@ -212498,6 +212636,12 @@ nodes = (
 width = 746;
 },
 {
+anchors = (
+{
+name = top;
+pos = (438,520);
+}
+);
 background = {
 shapes = (
 {
@@ -212709,6 +212853,12 @@ glyphname = "ia-cy";
 lastChange = "2023-03-20 16:16:02 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (330,520);
+}
+);
 background = {
 shapes = (
 {
@@ -212889,6 +213039,12 @@ nodes = (
 width = 554;
 },
 {
+anchors = (
+{
+name = top;
+pos = (347,520);
+}
+);
 background = {
 shapes = (
 {

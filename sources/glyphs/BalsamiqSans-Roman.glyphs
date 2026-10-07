@@ -2223,8 +2223,8 @@ tag = aalt;
 code = "lookup ccmp_Other_1 {
 	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dblgravecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb];
 	@CombiningNonTopAccents = [cedillacomb ogonekcomb horncomb dotbelowcomb commaaccentcomb verticallinebelowcomb];
-	sub [i j iogonek istroke i-cy]' @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy];
-	sub [i j iogonek istroke i-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy];
+	sub [i j iogonek istroke i-cy je-cy]' @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy jdotless];
+	sub [i j iogonek istroke i-cy je-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy jdotless];
 	@Markscomb = [gravecomb acutecomb circumflexcomb tildecomb macroncomb brevecomb dotaccentcomb dieresiscomb ringcomb hungarumlautcomb caroncomb horncomb cedillacomb ogonekcomb];
 	@MarkscombCase = [gravecomb.case acutecomb.case circumflexcomb.case tildecomb.case macroncomb.case brevecomb.case dotaccentcomb.case dieresiscomb.case ringcomb.case hungarumlautcomb.case caroncomb.case horncomb.case cedillacomb.case ogonekcomb.case];
 	sub @Markscomb @Markscomb' by @MarkscombCase;
@@ -25477,6 +25477,12 @@ kernRight = E;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (310,0);
+}
+);
 background = {
 shapes = (
 {
@@ -25645,6 +25651,12 @@ nodes = (
 width = 637;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (367,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26233,6 +26245,12 @@ kernRight = E;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (328,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26443,6 +26461,12 @@ nodes = (
 width = 659;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (368,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26635,6 +26659,12 @@ kernRight = E;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (321,0);
+}
+);
 background = {
 shapes = (
 {
@@ -26838,6 +26868,12 @@ nodes = (
 width = 667;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (367,0);
+}
+);
 background = {
 shapes = (
 {
@@ -27630,6 +27666,12 @@ kernRight = E;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (313,0);
+}
+);
 background = {
 shapes = (
 {
@@ -27800,6 +27842,12 @@ nodes = (
 width = 693;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (367,0);
+}
+);
 background = {
 shapes = (
 {
@@ -35995,6 +36043,12 @@ kernRight = O;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (402,0);
+}
+);
 background = {
 shapes = (
 {
@@ -36162,6 +36216,12 @@ nodes = (
 width = 777;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (365,0);
+}
+);
 background = {
 shapes = (
 {
@@ -36657,6 +36717,12 @@ kernRight = O;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (408,0);
+}
+);
 background = {
 shapes = (
 {
@@ -36898,6 +36964,12 @@ nodes = (
 width = 762;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (365,0);
+}
+);
 background = {
 shapes = (
 {
@@ -37631,6 +37703,12 @@ kernRight = O;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (379,0);
+}
+);
 background = {
 shapes = (
 {
@@ -37793,6 +37871,12 @@ nodes = (
 width = 730;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (365,0);
+}
+);
 background = {
 shapes = (
 {
@@ -51126,6 +51210,12 @@ kernRight = a;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (311,520);
+}
+);
 background = {
 shapes = (
 {
@@ -51334,6 +51424,12 @@ nodes = (
 width = 568;
 },
 {
+anchors = (
+{
+name = top;
+pos = (298,520);
+}
+);
 background = {
 shapes = (
 {
@@ -56077,6 +56173,12 @@ kernRight = e;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (303,0);
+}
+);
 background = {
 shapes = (
 {
@@ -56254,6 +56356,12 @@ nodes = (
 width = 602;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (300,0);
+}
+);
 background = {
 shapes = (
 {
@@ -56689,6 +56797,12 @@ kernRight = e;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (280,0);
+}
+);
 background = {
 shapes = (
 {
@@ -56942,6 +57056,12 @@ nodes = (
 width = 554;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (295,0);
+}
+);
 background = {
 shapes = (
 {
@@ -57144,6 +57264,12 @@ kernRight = e;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (303,0);
+}
+);
 background = {
 shapes = (
 {
@@ -57355,6 +57481,12 @@ nodes = (
 width = 602;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (295,0);
+}
+);
 background = {
 shapes = (
 {
@@ -58310,6 +58442,12 @@ kernRight = e;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (303,0);
+}
+);
 background = {
 shapes = (
 {
@@ -58487,6 +58625,12 @@ nodes = (
 width = 602;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (295,0);
+}
+);
 background = {
 shapes = (
 {
@@ -67866,6 +68010,12 @@ kernRight = o;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (275,0);
+}
+);
 background = {
 shapes = (
 {
@@ -68027,6 +68177,12 @@ nodes = (
 width = 570;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (284,0);
+}
+);
 background = {
 shapes = (
 {
@@ -68604,6 +68760,12 @@ kernRight = o;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (268,0);
+}
+);
 background = {
 shapes = (
 {
@@ -68781,6 +68943,12 @@ nodes = (
 width = 564;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (284,0);
+}
+);
 background = {
 shapes = (
 {
@@ -69351,6 +69519,12 @@ kernRight = o;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (270,0);
+}
+);
 background = {
 shapes = (
 {
@@ -69480,6 +69654,12 @@ nodes = (
 width = 557;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (284,0);
+}
+);
 background = {
 shapes = (
 {
@@ -76458,6 +76638,12 @@ kernRight = u;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (290,713);
+}
+);
 background = {
 shapes = (
 {
@@ -76595,6 +76781,12 @@ ref = macron;
 width = 572;
 },
 {
+anchors = (
+{
+name = top;
+pos = (283,741);
+}
+);
 background = {
 shapes = (
 {
@@ -76741,6 +76933,12 @@ kernRight = u;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (292,520);
+}
+);
 background = {
 shapes = (
 {
@@ -141836,6 +142034,12 @@ glyphname = Ocaron;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (397,0);
+}
+);
 background = {
 shapes = (
 {
@@ -142004,6 +142208,12 @@ ref = caroncomb.case;
 width = 770;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (364,0);
+}
+);
 background = {
 shapes = (
 {
@@ -162790,6 +163000,12 @@ kernRight = o;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (294,0);
+}
+);
 background = {
 shapes = (
 {
@@ -162992,6 +163208,12 @@ nodes = (
 width = 585;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (284,0);
+}
+);
 background = {
 shapes = (
 {
@@ -211367,6 +211589,12 @@ kernRight = "ie-cy";
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (292,732);
+}
+);
 background = {
 shapes = (
 {
@@ -211575,6 +211803,12 @@ nodes = (
 width = 550;
 },
 {
+anchors = (
+{
+name = top;
+pos = (294,749);
+}
+);
 background = {
 shapes = (
 {
@@ -214849,6 +215083,12 @@ nodes = (
 width = 522;
 },
 {
+anchors = (
+{
+name = top;
+pos = (282,521);
+}
+);
 background = {
 shapes = (
 {
@@ -216191,6 +216431,12 @@ nodes = (
 width = 461;
 },
 {
+anchors = (
+{
+name = top;
+pos = (232,518);
+}
+);
 background = {
 shapes = (
 {
@@ -218921,6 +219167,12 @@ kernRight = "en-cy";
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (357,520);
+}
+);
 background = {
 shapes = (
 {
@@ -219073,6 +219325,12 @@ nodes = (
 width = 719;
 },
 {
+anchors = (
+{
+name = top;
+pos = (372,520);
+}
+);
 background = {
 shapes = (
 {
@@ -219241,6 +219499,12 @@ kernRight = soft;
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (272,520);
+}
+);
 background = {
 shapes = (
 {
@@ -219400,6 +219664,12 @@ nodes = (
 width = 563;
 },
 {
+anchors = (
+{
+name = top;
+pos = (266,520);
+}
+);
 background = {
 shapes = (
 {
@@ -220738,6 +221008,12 @@ kernRight = "e-cy";
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (277,520);
+}
+);
 background = {
 shapes = (
 {
@@ -220854,6 +221130,12 @@ nodes = (
 width = 520;
 },
 {
+anchors = (
+{
+name = top;
+pos = (273,520);
+}
+);
 background = {
 shapes = (
 {
@@ -221026,6 +221308,12 @@ kernRight = "o-cy";
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (249,520);
+}
+);
 background = {
 shapes = (
 {
@@ -221189,6 +221477,12 @@ nodes = (
 width = 516;
 },
 {
+anchors = (
+{
+name = top;
+pos = (251,520);
+}
+);
 background = {
 shapes = (
 {
@@ -222227,6 +222521,12 @@ kernRight = "o-cy";
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (390,520);
+}
+);
 background = {
 shapes = (
 {
@@ -222393,6 +222693,12 @@ nodes = (
 width = 745;
 },
 {
+anchors = (
+{
+name = top;
+pos = (384,520);
+}
+);
 background = {
 shapes = (
 {
@@ -222605,6 +222911,12 @@ kernRight = "en-cy";
 lastChange = "2023-03-20 16:15:49 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (270,520);
+}
+);
 background = {
 shapes = (
 {
@@ -222782,6 +223094,12 @@ nodes = (
 width = 555;
 },
 {
+anchors = (
+{
+name = top;
+pos = (276,520);
+}
+);
 background = {
 shapes = (
 {
