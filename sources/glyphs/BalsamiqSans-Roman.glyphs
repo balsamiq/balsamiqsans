@@ -2220,8 +2220,8 @@ tag = aalt;
 },
 {
 code = "lookup ccmp_Other_1 {
-	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb];
-	@CombiningNonTopAccents = [cedillacomb ogonekcomb horncomb];
+	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dblgravecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb];
+	@CombiningNonTopAccents = [cedillacomb ogonekcomb horncomb dotbelowcomb commaaccentcomb verticallinebelowcomb];
 	sub [i j iogonek istroke i-cy]' @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy];
 	sub [i j iogonek istroke i-cy]' @CombiningNonTopAccents @CombiningTopAccents by [idotless jdotless idotless_ogonek idotless_stroke idotless-cy];
 	@Markscomb = [gravecomb acutecomb circumflexcomb tildecomb macroncomb brevecomb dotaccentcomb dieresiscomb ringcomb hungarumlautcomb caroncomb horncomb cedillacomb ogonekcomb];
@@ -299605,6 +299605,7 @@ width = 333;
 unicode = 13;
 },
 {
+export = 0;
 glyphname = NULL;
 lastChange = "2020-03-25 01:07:13 +0000";
 layers = (
@@ -510367,6 +510368,7 @@ width = 300;
 unicode = 809;
 },
 {
+export = 0;
 glyphname = dblgravecomb.001;
 lastChange = "2026-06-02 18:46:12 +0000";
 layers = (
