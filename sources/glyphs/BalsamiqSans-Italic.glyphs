@@ -2228,6 +2228,7 @@ code = "lookup ccmp_Other_1 {
 
 lookup ccmp_Idotbelow {
 	sub idotbelow' [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dblgravecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb] by idotless dotbelowcomb;
+	sub idotbelow' [cedillacomb ogonekcomb horncomb dotbelowcomb commaaccentcomb verticallinebelowcomb] [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dblgravecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb] by idotless dotbelowcomb;
 } ccmp_Idotbelow;
 
 lookup ccmp_Other_2 {
