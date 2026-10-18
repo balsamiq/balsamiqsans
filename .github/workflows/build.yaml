@@ -2,6 +2,8 @@ name: Build font and specimen
 
 on:
   push:
+    # Branches only: a release's tag push would duplicate the release build below
+    branches: ["**"]
   release:
     # Only a newly published release builds and uploads the fonts. Other release
     # activity (edits, deletions) would rerun the upload, or fail on a deleted release.
@@ -12,12 +14,13 @@ on:
 permissions:
   contents: read
 
+env:
+  # The archive name, e.g. "balsamiqsans-fonts"
+  ZIP_NAME: ${{ github.event.repository.name }}-fonts
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      # The archive name, e.g. "balsamiqsans-fonts"
-      ZIP_NAME: ${{ github.event.repository.name }}-fonts
     steps:
       - uses: actions/checkout@v7
         with:
@@ -35,21 +38,22 @@ jobs:
       - name: Read runner image
         id: runner-image
         run: echo "os=$ImageOS" >> "$GITHUB_OUTPUT"
-      # The venv points to the interpreter and system libraries it was built with, so the
-      # key includes the runner image and the full Python version. There are no
+      # The venv points to the interpreter it was built with, so the key includes the
+      # OS release (e.g. ubuntu24) and the full Python version. There are no
       # restore-keys: a partial match would bring back packages that requirements.txt
       # no longer lists.
       - uses: actions/cache@v6
         id: venv-cache
         with:
           path: ./venv/
-          key: ${{ runner.os }}-${{ steps.runner-image.outputs.os }}-python-${{ steps.setup-python.outputs.python-version }}-venv-${{ hashFiles('**/requirements*.txt') }}
+          key: ${{ steps.runner-image.outputs.os }}-python-${{ steps.setup-python.outputs.python-version }}-venv-${{ hashFiles('**/requirements*.txt') }}
       # The restored touchfile is older than the freshly checked out requirements.txt,
-      # so make would reinstall everything. An exact cache hit is already up to date.
+      # so make would reinstall everything. An exact cache hit is already up to date
+      # (a cache is only saved after a successful run).
       - name: Mark the restored venv as current
         if: steps.venv-cache.outputs.cache-hit == 'true'
         run: touch venv/touchfile
-        # If a new release is cut, use the release tag to auto-bump the source files
+      # If a new release is cut, use the release tag to auto-bump the source files
       - name: Bump release
         if: github.event_name == 'release'
         run: |
@@ -77,8 +81,6 @@ jobs:
           path: |
             fonts
             out
-    outputs:
-      zip_name: ${{ env.ZIP_NAME }}
   release:
     # only run if the commit is tagged...
     if: github.event_name == 'release'
@@ -88,8 +90,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    env:
-      ZIP_NAME: ${{ needs.build.outputs.zip_name }}
     steps:
       - name: Download artefact files
         uses: actions/download-artifact@v8
