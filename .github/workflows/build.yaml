@@ -1,13 +1,29 @@
 name: Build font and specimen
 
-on: [push, release]
+on:
+  push:
+  release:
+    # Only a newly published release builds and uploads the fonts. Other release
+    # activity (edits, deletions) would rerun the upload, or fail on a deleted release.
+    types: [published]
+
+# Read-only by default. Only the release job gets write access, so the build
+# (and the Python packages it installs) never holds a write-scoped token.
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # The archive name, e.g. "balsamiqsans-fonts"
+      ZIP_NAME: ${{ github.event.repository.name }}-fonts
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: Set up Python 3.11
+        id: setup-python
         uses: actions/setup-python@v7
         with:
           python-version: "3.11"
@@ -16,28 +32,34 @@ jobs:
           sudo apt-get update
           sudo apt-get install ttfautohint libcairo2-dev
           sudo snap install yq
+      - name: Read runner image
+        id: runner-image
+        run: echo "os=$ImageOS" >> "$GITHUB_OUTPUT"
+      # The venv points to the interpreter and system libraries it was built with, so the
+      # key includes the runner image and the full Python version. There are no
+      # restore-keys: a partial match would bring back packages that requirements.txt
+      # no longer lists.
       - uses: actions/cache@v6
+        id: venv-cache
         with:
           path: ./venv/
-          key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements*.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-venv-
-      - name: gen zip file name
-        id: zip-name
-        shell: bash
-        # Set the archive name to repo name + "-assets" e.g "MavenPro-assets"
-        run: echo "ZIP_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')-fonts" >> $GITHUB_ENV
+          key: ${{ runner.os }}-${{ steps.runner-image.outputs.os }}-python-${{ steps.setup-python.outputs.python-version }}-venv-${{ hashFiles('**/requirements*.txt') }}
+      # The restored touchfile is older than the freshly checked out requirements.txt,
+      # so make would reinstall everything. An exact cache hit is already up to date.
+      - name: Mark the restored venv as current
+        if: steps.venv-cache.outputs.cache-hit == 'true'
+        run: touch venv/touchfile
         # If a new release is cut, use the release tag to auto-bump the source files
       - name: Bump release
         if: github.event_name == 'release'
         run: |
+          make venv
           . venv/bin/activate
           SRCS=$(yq e ".sources[]" sources/config.yaml)
-          TAG_NAME=${GITHUB_REF/refs\/tags\//}
-          echo "Bumping $SRCS to $TAG_NAME"
+          echo "Bumping $SRCS to $GITHUB_REF_NAME"
           for src in $SRCS
           do
-            bumpfontversion sources/$src --new-version $TAG_NAME;
+            bumpfontversion "sources/$src" --new-version "$GITHUB_REF_NAME";
           done
       - name: Build font
         run: make build
@@ -48,12 +70,6 @@ jobs:
         run: make proof
       - name: setup site
         run: cp scripts/index.html out/index.html
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        if: ${{ github.ref == 'refs/heads/master' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
       - name: Archive artifacts
         uses: actions/upload-artifact@v7
         with:
@@ -70,10 +86,11 @@ jobs:
     needs:
       - build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       ZIP_NAME: ${{ needs.build.outputs.zip_name }}
     steps:
-      - uses: actions/checkout@v7
       - name: Download artefact files
         uses: actions/download-artifact@v8
         with:
@@ -82,7 +99,7 @@ jobs:
       - name: Zip files
         run: zip -r ${{ env.ZIP_NAME }}.zip ${{ env.ZIP_NAME }}
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@2.11.5
+        uses: svenstaro/upload-release-action@29e53e917877a24fad85510ded594ab3c9ca12de # 2.11.5
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ env.ZIP_NAME }}.zip
