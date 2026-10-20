@@ -23,7 +23,9 @@ build.stamp: venv .init.stamp sources/config.yaml $(SOURCES)
 	. venv/bin/activate; python3 scripts/fix-font-tables.py
 	touch build.stamp
 
-.init.stamp: venv
+# Order-only: a rebuilt venv must not rerun the template's first-run script, which
+# overwrites requirements.txt, README.md and OFL.txt. It runs only if .init.stamp is missing.
+.init.stamp: | venv
 	. venv/bin/activate; python3 scripts/first-run.py
 
 venv/touchfile: requirements.txt
