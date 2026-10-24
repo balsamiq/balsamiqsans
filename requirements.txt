@@ -33,7 +33,7 @@ blackrenderer[skia]==0.8.2
     #   drawbot-skia
 booleanoperations==0.10.0
     # via ufo2ft
-brotli==1.2.0
+brotli==1.2.1
     # via gftools
 bump2version==1.0.1
     # via bumpfontversion
@@ -41,7 +41,7 @@ bumpfontversion==0.4.1
     # via -r requirements.in
 cattrs==26.1.0
     # via ufolib2
-certifi==2026.5.20
+certifi==2026.10.23
     # via
     #   requests
     #   selenium
@@ -82,7 +82,7 @@ exceptiongroup==1.3.1
     #   trio-websocket
 ffmpeg-python==0.2.0
     # via gftools
-filelock==3.29.0
+filelock==4.2.4
     # via youseedee
 fontbakery[beautifulsoup4,googlefonts,googlefontsalwayslatest,shaperglot]==1.1.0
     # via
@@ -224,7 +224,7 @@ packaging==26.2
     #   gftools
 picosvg==0.22.3
     # via nanoemoji
-pillow==12.3.0
+pillow==13.0.0
     # via
     #   diffenator2
     #   gftools
@@ -422,5 +422,5 @@ zopfli==0.4.2
 # The following packages are considered to be unsafe in a requirements file:
 pip==26.2
     # via pip-api
-setuptools==83.0.0
+setuptools==84.2.1
     # via glyphsets
