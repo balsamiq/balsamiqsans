@@ -105,5 +105,6 @@ jobs:
           file: ${{ env.ZIP_NAME }}.zip
           asset_name: ${{ env.ZIP_NAME }}.zip
           tag: ${{ github.ref }}
+          # Lets a rerun replace the zip. No `body`: with overwrite on, the action
+          # would replace the release notes written when the release was published.
           overwrite: true
-          body: "Production ready fonts"
